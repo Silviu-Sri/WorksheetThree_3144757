@@ -1,49 +1,25 @@
 package griffith;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class RhombusTest {
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
+    @Test
+    void testRhombusArea() {
+        Rhombus rhombus = new Rhombus("Rhombus", 4, 6, 5);
+        assertEquals((4 * 6) / 2.0, rhombus.area(), 0.0001);
+    }
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
+    @Test
+    void testRhombusPerimeter() {
+        Rhombus rhombus = new Rhombus("Rhombus", 4, 6, 5);
+        assertEquals(4 * 5, rhombus.perimeter(), 0.0001);
+    }
 
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
-	@Test
-	void testArea() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testPerimeter() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testRhombus() {
-		fail("Not yet implemented");
-	}
-
+    @Test
+    void testRhombusToString() {
+        Rhombus rhombus = new Rhombus("MyRhombus", 8, 10, 6);
+        assertEquals("Shape: MyRhombus, Diagonals: 8.0 & 10.0, Side: 6.0", rhombus.toString());
+    }
 }
